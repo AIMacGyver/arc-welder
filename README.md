@@ -66,6 +66,20 @@ If you want to run Arc-Welder in verbose mode, add the `--verbose` flag:
 poetry run python main.py run_arc_welder --verbose
 ```
 
+Example useage and output
+```bash
+❯ poetry run python main.py run-arc-welder
+Running arc-welder...
+How can I help you?
+What are the targets of vorinostat?
+load INSTRUCTOR_Transformer
+max_seq_length  512
+- HDAC3
+- HDAC1
+- HDAC2
+- HDAC6
+```
+
 If you want to learn more about the support schemas please refer to `arc_welder/configs/graphql_schemas.yaml`.
 
 To change the OpenAI model or adjust the LLM parameters please refer to `arc_welder/configs/openai_models.yaml`.
