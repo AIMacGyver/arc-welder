@@ -1,0 +1,51 @@
+targets_for_drug:
+  query: |
+    {
+      search(queryString: drug, entityNames: target) {
+        hits {
+          id
+          name
+          entity
+        }
+      }
+    }
+  question: "What are the targets of vorinostat?"
+
+
+drugs_for_disease:
+  query: |
+    {
+      search(queryString: disease, entityNames: drug) {
+        hits {
+          id
+          name
+          entity
+        }
+      }
+    }
+  question: "Find drugs that are used for treating ulcerative colitis"
+
+diseases_associated_:
+  query: |
+    {
+      search(queryString: drug, entityNames: target) {
+        hits {
+          id
+          name
+          entity
+          object {
+            ... on Target {
+              associatedDiseases(page: {index: 0, size: 3}) {
+                rows {
+                  score
+                  disease {
+                    name
+                  }
+                }
+            }
+          }
+        }
+      }
+      }
+    }
+  question: "Which diseases are associated with the genes targetted by fasudil?"

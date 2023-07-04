@@ -1,0 +1,3 @@
+xl-model:
+  model_name: "hkunlp/instructor-xl"
+  instruction: "Represent the Medicine insturction or question"

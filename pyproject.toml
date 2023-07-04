@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "arc-welder"
+version = "0.1.0"
+description = "Arc-Welder is a Python application that takes a natural language instruction or question and returns the appropriate response using the Open Targets API"
+authors = ["rannand84 <robertannand@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "arc_welder"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+openai = "^0.27.8"
+langchain = "^0.0.221"
+jupyter = "^1.0.0"
+huggingface-hub = "^0.15.1"
+gql = "^3.4.1"
+requests-toolbelt = "^1.0.0"
+instructorembedding = "^1.0.1"
+scikit-learn = "^1.3.0"
+torch = "^2.0.1"
+torchvision = "^0.15.2"
+torchaudio = "^2.0.2"
+sentence-transformers = "^2.2.2"
+click = "^8.1.3"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+nbqa = "^1.7.0"
+pytest = "^7.4.0"
+pre-commit = "^3.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# Black formatting
+[tool.black]
+line-length = 120
+include = '\.pyi?|app\.py$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 120

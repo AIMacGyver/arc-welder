@@ -1,0 +1,12 @@
+targets_for_drug:
+  query: |
+    {
+      search(queryString: drug, entityNames: target) {
+        hits {
+          id
+          name
+          entity
+        }
+      }
+    }
+  question: "What are the targets of vorinostat?"
