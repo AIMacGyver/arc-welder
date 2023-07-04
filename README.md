@@ -23,7 +23,7 @@ Before you begin, ensure you have Python 3.11.0 installed on your machine.
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/arc-welder.git
+   git clone https://github.com/rannand84/arc-welder.git
    ```
 
 2. Navigate to the project directory:
@@ -65,6 +65,11 @@ If you want to run Arc-Welder in verbose mode, add the `--verbose` flag:
 ```bash
 poetry run python main.py run_arc_welder --verbose
 ```
+
+If you want to learn more about the support schemas please refer to `arc_welder/configs/graphql_schemas.yaml`.
+
+To change the OpenAI model or adjust the LLM parameters please refer to `arc_welder/configs/openai_models.yaml`.
+
 
 ## Contact
 
