@@ -2,7 +2,7 @@
 name = "arc-welder"
 version = "0.1.0"
 description = "Arc-Welder is a Python application that takes a natural language instruction or question and returns the appropriate response using the Open Targets API"
-authors = ["rannand84 <robertannand@gmail.com>"]
+authors = ["AIMacGyver <robertannand@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 packages = [{include = "arc_welder"}]
